@@ -5,7 +5,6 @@ import com.example.boot_bank.repository.CardRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -22,7 +21,7 @@ public class CardService {
         return cardRepository.findAll();
     }
 
-    public List<Card> getCardsByAccountId(List<String> accountIds) {
-        return Collections.emptyList();
+    public List<Card> getCardsByAccountId(int accountId) {
+        return cardRepository.findByAccountId(accountId);
     }
 }

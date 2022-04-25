@@ -24,8 +24,8 @@ public class CardController {
         return cardService.getCards();
     }
 
-    @GetMapping("/accounts/{accountId}/cards")
-    public List<Card> getCardsByAccountId(@PathVariable String accountId) {
-        return cardService.getCardsByAccountId(List.of(accountId));
+    @GetMapping("/api/v1/accounts/{accountId}/cards")
+    public List<Card> getCardsByAccountId(@PathVariable int accountId) {
+        return cardService.getCardsByAccountId(accountId);
     }
 }
